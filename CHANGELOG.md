@@ -1,1 +1,1 @@
-- Fixed some custom recipes not applying.
+- Fixed feature cycle error with Wilder Clifftree.

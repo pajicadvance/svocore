@@ -40,16 +40,39 @@ public class WorldgenDataEvents {
                 }
         );
         MixsonHelper.registerSingleJson(
-                "Patch Wilder Clifftree",
+                "Patch Wilder Clifftree for latest Wilder Wild",
                 "clifftree:worldgen/biome/lukewarm_caves",
                 context -> {
                     JsonElement target1 = new JsonPrimitive("wilderwild:blue_mesoglea");
                     JsonElement target2 = new JsonPrimitive("wilderwild:purple_mesoglea");
                     JsonArray features = context.getFile().getAsJsonObject().getAsJsonArray("features");
                     features.forEach(e -> {
-                        JsonArray array = e.getAsJsonArray();
-                        array.remove(target1);
-                        array.remove(target2);
+                        if (e.isJsonArray()) {
+                            JsonArray array = e.getAsJsonArray();
+                            array.remove(target1);
+                            array.remove(target2);
+                        }
+                    });
+                }
+        );
+        MixsonHelper.registerSingleJson(
+                "Fix Wilder Clifftree feature cycle",
+                "minecraft:worldgen/biome/snowy_taiga",
+                context -> {
+                    JsonElement first = new JsonPrimitive("wilderwild:maple_trees");
+                    JsonElement second = new JsonPrimitive("minecraft:patch_large_fern");
+                    JsonArray features = context.getFile().getAsJsonObject().getAsJsonArray("features");
+                    features.forEach(e -> {
+                        if (e.isJsonArray()) {
+                            JsonArray array = e.getAsJsonArray();
+                            int index1 = array.asList().indexOf(first);
+                            int index2 = array.asList().indexOf(second);
+                            if (index1 != -1 && index2 != -1 && index1 > index2) {
+                                JsonElement temp = array.get(index1);
+                                array.set(index1, array.get(index2));
+                                array.set(index2, temp);
+                            }
+                        }
                     });
                 }
         );
