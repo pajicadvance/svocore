@@ -5,6 +5,7 @@ import me.pajic.svocore.SVO;
 import me.pajic.svocore.mixson.MixsonHelper;
 
 import java.util.List;
+import java.util.Set;
 
 public class RecipeEvents {
 
@@ -25,11 +26,17 @@ public class RecipeEvents {
 
     public static void register() {
         if (CompatFlags.FD_LOADED) {
-            if (SVO.CONFIG.modIntegration.svoFDAddon.get()) MixsonHelper.registerSingleJson(
-                    "Remove cake recipe",
-                    "minecraft:recipe/cake",
-                    context -> context.markForDeletion(true)
-            );
+            if (SVO.CONFIG.modIntegration.svoFDAddon.get()) {
+                MixsonHelper.registerMultiJson(
+                        "Remove recipes",
+                        Set.of(
+                                "minecraft:recipe/cake",
+                                "farmersdelight:recipe/cake_from_milk_bottle",
+                                "farmersdelight:recipe/cutting/gravel"
+                        ),
+                        context -> context.markForDeletion(true)
+                );
+            }
             if (SVO.CONFIG.earlyGameExtension.get()) MixsonHelper.registerSingleJson(
                     "Modify cooking pot recipe",
                     "farmersdelight:recipe/cooking_pot",

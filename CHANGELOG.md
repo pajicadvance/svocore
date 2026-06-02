@@ -1,1 +1,1 @@
-- Initial release.
+- Fixed some custom recipes not applying.

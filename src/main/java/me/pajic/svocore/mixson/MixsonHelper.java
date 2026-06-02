@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Set;
 import java.util.function.Predicate;
 
 public class MixsonHelper {
@@ -56,6 +57,18 @@ public class MixsonHelper {
                 ERROR_POLICY,
                 eventName,
                 index -> index.idEquals(new Index(target)),
+                event
+        );
+    }
+
+    public static void registerMultiJson(String eventName, Set<String> targets, Event<JsonElement> event) {
+        Mixson.registerEvent(
+                MixsonCodecs.JSON_ELEMENT,
+                Mixson.DEFAULT_PRIORITY,
+                Lifetime.PERSISTENT,
+                ERROR_POLICY,
+                eventName,
+                index -> targets.stream().anyMatch(s -> index.idEquals(new Index(s))),
                 event
         );
     }
