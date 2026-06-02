@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:maple_planks",
+     "wilderwild:maple_stairs",
+     "wilderwild:maple_fence",
+     "wilderwild:maple_pressure_plate",
+     "wilderwild:maple_sign"
+  ],
+  "result": {
+    "id": "wilderwild:maple_button",
+    "count": 1
+  }
+}

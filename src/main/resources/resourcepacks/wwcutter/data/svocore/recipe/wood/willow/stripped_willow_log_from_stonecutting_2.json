@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:willow_hanging_sign"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_willow_log",
+    "count": 2
+  }
+}

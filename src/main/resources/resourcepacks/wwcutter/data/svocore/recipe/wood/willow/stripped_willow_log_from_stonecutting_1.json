@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:willow_log",
+     "wilderwild:willow_wood",
+     "wilderwild:stripped_willow_wood"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_willow_log",
+    "count": 1
+  }
+}

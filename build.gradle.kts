@@ -1,10 +1,9 @@
 plugins {
-    // This plugin applies the correct loom variant based on the Minecraft version
     id("dev.kikugie.loom-back-compat")
+    id("me.modmuss50.mod-publish-plugin") version "2.0.0-beta.2"
 }
 
-// DO NOT set group = ...!
-version = "${property("mod.version")}+${sc.current.version}"
+version = "${property("mod.version")}"
 base.archivesName = property("mod.id") as String
 
 val requiredJava: JavaVersion = when {
@@ -15,54 +14,60 @@ val requiredJava: JavaVersion = when {
     else -> JavaVersion.VERSION_1_8
 }
 
-// This can be used for publishing on Modrinth and Curseforge
 val compatibleVersions: List<String> = sc.properties.rawOrNull("mod", "mc_releases")
     ?.asList().orEmpty().map { it.toString() }
 
 repositories {
-    /**
-     * Restricts dependency search of the given [groups] to the [maven URL][url],
-     * improving the setup speed.
-     */
     fun strictMaven(url: String, alias: String, vararg groups: String) = exclusiveContent {
         forRepository { maven(url) { name = alias } }
         filter { groups.forEach(::includeGroup) }
     }
     strictMaven("https://www.cursemaven.com", "CurseForge", "curse.maven")
     strictMaven("https://api.modrinth.com/maven", "Modrinth", "maven.modrinth")
+    maven("https://maven.terraformersmc.com/")
+    maven("https://maven.fzzyhmstrs.me/")
+    maven("https://maven.caffeinemc.net/releases")
 }
 
 dependencies {
-    /**
-     * Fetches only the required Fabric API modules to not waste time downloading all of them for each version.
-     * @see <a href="https://github.com/FabricMC/fabric">List of Fabric API modules</a>
-     */
-    fun fapi(vararg modules: String) {
-        for (it in modules) modImplementation(fabricApi.module(it, sc.properties["deps.fabric_api"]))
-    }
-
     minecraft("com.mojang:minecraft:${sc.current.version}")
-    // Applies Mojang Mappings on obfuscated versions
     loomx.applyMojangMappings()
 
     modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric_loader")}")
-    fapi("fabric-lifecycle-events-v1", "fabric-resource-loader-v0", "fabric-content-registries-v0")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
+
+    modImplementation("maven.modrinth:mixson:${property("deps.mixson")}")
+    modImplementation("com.terraformersmc:modmenu:${property("deps.modmenu")}")
+    modImplementation("me.fzzyhmstrs:fzzy_config:${property("deps.fzzy_config")}")
+    modImplementation("com.moulberry:mixinconstraints:${property("deps.mixinconstraints")}")
+    include("com.moulberry:mixinconstraints:${property("deps.mixinconstraints")}")
+
+    compileOnlyApi("net.caffeinemc:sodium-fabric-api:${property("deps.sodium")}")
+    modRuntimeOnly("net.caffeinemc:sodium-fabric:${property("deps.sodium")}")
+
+    compileOnly("maven.modrinth:iris:1.10.9+26.1-fabric")
+    compileOnly("maven.modrinth:farmers-delight-refabricated:26.1-3.5.1")
+    compileOnly("maven.modrinth:wilder-wild:4.2.8-mc26.1")
+    compileOnly("maven.modrinth:trailier-tales:1.2.5-mc26.1")
+    compileOnly("maven.modrinth:better-block-entities:1.3.2+mc26.1.2")
+    compileOnly("maven.modrinth:reliable-gliders:1.3.1-26.1.2-fabric")
+    compileOnly("maven.modrinth:reusable-vault-blocks:1.0.0-fabric,26.1")
 }
 
 loom {
-    fabricModJsonPath = rootProject.file("src/main/resources/fabric.mod.json") // Useful for interface injection
+    fabricModJsonPath = rootProject.file("src/main/resources/fabric.mod.json")
     accessWidenerPath = sc.process(
-        rootProject.file("src/main/resources/template.ct"),
+        rootProject.file("src/main/resources/${property("mod.id")}.ct"),
         "build/processed.ct"
     )
 
     decompilerOptions.named("vineflower") {
-        options.put("mark-corresponding-synthetics", "1") // Adds names to lambdas - useful for mixins
+        options.put("mark-corresponding-synthetics", "1")
     }
 
     runConfigs.all {
-        vmArgs("-Dmixin.debug.export=true") // Exports transformed classes for debugging
-        runDir = "../../run" // Shares the run directory between versions
+        vmArgs("-Dmixin.debug.export=true")
+        runDir = "../../run"
     }
 }
 
@@ -72,7 +77,7 @@ java {
     sourceCompatibility = requiredJava
 
     toolchain {
-        vendor = JvmVendorSpec.ADOPTIUM
+        vendor = JvmVendorSpec.MICROSOFT
         languageVersion = JavaLanguageVersion.of(requiredJava.majorVersion)
     }
 }
@@ -98,13 +103,27 @@ tasks {
         filesMatching("*.mixins.json") { expand("java" to mixinJava) }
     }
 
-    // Builds the version into a shared folder in `build/libs/${mod version}/`
     register<Copy>("buildAndCollect") {
         group = "build"
 
-        // loomx.mod(Sources)Jar returns the jar task for the applied loom variant
         from(loomx.modJar.map { it.archiveFile }, loomx.modSourcesJar.map { it.archiveFile })
         into(rootProject.layout.buildDirectory.file("libs/${project.property("mod.version")}"))
         dependsOn("build")
+    }
+}
+
+publishMods {
+    file.set(loomx.modJar.get().archiveFile)
+    changelog.set(rootProject.file("CHANGELOG.md").readText())
+    type.set(STABLE)
+    modLoaders.add("fabric")
+    displayName = "${property("mod.version")} for ${sc.current.version}"
+
+    modrinth {
+        projectId.set("${property("mod.modrinth_id")}")
+        accessToken.set(providers.environmentVariable("MR_KEY"))
+        minecraftVersions.addAll(compatibleVersions)
+        requires("fabric-api", "fzzy-config", "mixson")
+        optional("modmenu")
     }
 }

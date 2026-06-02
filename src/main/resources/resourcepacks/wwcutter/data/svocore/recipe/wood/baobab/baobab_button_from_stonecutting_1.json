@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:baobab_planks",
+     "wilderwild:baobab_stairs",
+     "wilderwild:baobab_fence",
+     "wilderwild:baobab_pressure_plate",
+     "wilderwild:baobab_sign"
+  ],
+  "result": {
+    "id": "wilderwild:baobab_button",
+    "count": 1
+  }
+}

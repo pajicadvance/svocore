@@ -1,0 +1,7 @@
+classTweaker v1 official
+
+accessible class net/minecraft/world/level/levelgen/SurfaceRules$Context
+accessible field net/minecraft/world/level/levelgen/SurfaceRules$Context steep Lnet/minecraft/world/level/levelgen/SurfaceRules$Condition;
+accessible method net/minecraft/world/level/levelgen/SurfaceRules$Condition test ()Z
+accessible class net/minecraft/world/level/levelgen/SurfaceRules$Context$SteepMaterialCondition
+accessible class net/minecraft/world/level/levelgen/SurfaceRules$LazyXZCondition

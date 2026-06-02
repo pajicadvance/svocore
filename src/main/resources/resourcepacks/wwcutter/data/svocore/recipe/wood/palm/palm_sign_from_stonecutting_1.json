@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:palm_pressure_plate",
+     "wilderwild:palm_door"
+  ],
+  "result": {
+    "id": "wilderwild:palm_sign",
+    "count": 1
+  }
+}

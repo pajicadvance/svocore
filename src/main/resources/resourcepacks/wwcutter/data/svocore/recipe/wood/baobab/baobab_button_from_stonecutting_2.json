@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:baobab_door",
+     "wilderwild:baobab_fence_gate"
+  ],
+  "result": {
+    "id": "wilderwild:baobab_button",
+    "count": 2
+  }
+}

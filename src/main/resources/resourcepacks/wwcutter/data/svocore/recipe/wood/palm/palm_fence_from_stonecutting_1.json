@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:palm_planks",
+     "wilderwild:palm_stairs"
+  ],
+  "result": {
+    "id": "wilderwild:palm_fence",
+    "count": 1
+  }
+}

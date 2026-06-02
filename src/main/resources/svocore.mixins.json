@@ -1,0 +1,33 @@
+{
+  "required": true,
+  "package": "me.pajic.svocore.mixin",
+  "compatibilityLevel": "${java}",
+  "mixinextras": {"minVersion": "0.5.4"},
+  "mixins": [
+    "clifffixes.SteepMaterialConditionMixin",
+    "clifffixes.SurfaceSystemMixin",
+    "earlygame.CreativeModeTabMixin",
+    "earlygame.ItemMixin",
+    "earlygame.PlayerMixin",
+    "earlygame.WitherSkeletonMixin",
+    "integration.farmersdelight.FoodValuesMixin",
+    "integration.reliable_gliders.ModItemsMixin",
+    "integration.rvb.ReusableVaultBlocksMixin",
+    "integration.trailiertales.CoffinSpawnerMixin",
+    "integration.wilderwild.bbe.StoneChestBlockEntityMixin",
+    "misc.AmbientMoodSettingsMixin",
+    "misc.CakeBlockMixin",
+    "misc.HoglinMixin",
+    "misc.MapItemMixin",
+    "misc.ReplaceDiskMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "earlygame.CraftPlanksTutorialStepMixin",
+    "earlygame.FindTreeTutorialStepInstanceMixin",
+    "earlygame.PunchTreeTutorialStepInstanceMixin",
+    "earlygame.TutorialToastIconsMixin"
+  ]
+}

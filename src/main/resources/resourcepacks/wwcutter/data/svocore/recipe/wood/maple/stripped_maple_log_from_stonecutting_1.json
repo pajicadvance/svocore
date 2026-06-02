@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:maple_log",
+     "wilderwild:maple_wood",
+     "wilderwild:stripped_maple_wood"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_maple_log",
+    "count": 1
+  }
+}

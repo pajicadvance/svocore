@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:baobab_log",
+     "wilderwild:stripped_baobab_log",
+     "wilderwild:baobab_wood",
+     "wilderwild:stripped_baobab_wood"
+  ],
+  "result": {
+    "id": "wilderwild:baobab_sign",
+    "count": 2
+  }
+}

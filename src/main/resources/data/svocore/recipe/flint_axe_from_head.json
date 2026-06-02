@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "svocore:flint_axe_head"
+  },
+  "pattern": [
+    "X#",
+    " #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "svocore:flint_axe"
+  }
+}

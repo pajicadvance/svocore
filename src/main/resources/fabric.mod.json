@@ -3,28 +3,32 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "Me!"
-  ],
-  "contact": {
-    "homepage": "https://stonecutter.kikugie.dev/",
-    "sources": "https://codeberg.org/stonecutter/template-fabric"
-  },
-  "license": "CC0-1.0",
-  "icon": "assets/template/icon.png",
+  "description": "Core mod for the Simple Vanilla Overhaul modpack",
+  "authors": ["pajic"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.TemplateMod"
+      "me.pajic.svocore.SVO"
+    ],
+    "client": [
+      "me.pajic.svocore.SVOClient"
+    ],
+    "sodium:config_api_user": [
+      "me.pajic.svocore.config.ModSodiumConfig"
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "svocore.mixins.json"
   ],
-  "accessWidener": "template.ct",
+  "accessWidener": "svocore.ct",
   "depends": {
-    "fabricloader": ">=0.17",
-    "minecraft": "${minecraft}"
+    "fabricloader": ">=0.19.2",
+    "fabric-api": "*",
+    "minecraft": "${minecraft}",
+    "fzzy_config": "*",
+    "mixson": ">=2.2.0"
   }
 }

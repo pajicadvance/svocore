@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:story/mine_stone",
+  "criteria": {
+    "get_copper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.copper_ingot.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:copper_ingot"
+    },
+    "title": {
+      "translate": "advancements.story.copper_ingot.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_copper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

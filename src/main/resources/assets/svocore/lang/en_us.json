@@ -1,0 +1,57 @@
+{
+  "biome.nullscape.crystal_peaks": "Crystal Peaks",
+  "biome.nullscape.shadowlands": "Shadowlands",
+  "biome.nullscape.void_barrens": "Void Barrens",
+
+  "config.svo.settings": "Settings",
+  "config.svo.shaderPreset": "Shader preset",
+  "config.svo.shaderPreset.tooltip": "Applies a shader preset preconfigured by the modpack.",
+  "config.svo.shaderOff": "Off",
+  "config.svo.shaderPresetUnavailable.tooltip": "No shader presets found.",
+  "config.svo.shaderPreset.potato": "Potato",
+  "config.svo.shaderPreset.very_low": "Very Low",
+  "config.svo.shaderPreset.low": "Low",
+  "config.svo.shaderPreset.medium": "Medium",
+  "config.svo.shaderPreset.high": "High",
+  "config.svo.disableLBGLayers": "Disable LBG layers",
+  "config.svo.disableLBGLayers.tooltip": "Disables everything related to the \"better layers\" feature from LambdaBetterGrass, such as better snow layers, while retaining the block side textures.",
+
+  "advancements.story.cutting_edge.title": "Embracing the Cutting Edge",
+  "advancements.story.cutting_edge.description": "Harvest Flint from Gravel and Sticks from Leaves and make your first tool with an Axe Head",
+  "advancements.story.copper_ingot.title": "Acquire Software",
+  "advancements.story.copper_ingot.description": "Smelt a Copper Ingot",
+
+  "item.svocore.flint_pickaxe": "Flint Pickaxe",
+  "item.svocore.flint_shovel": "Flint Shovel",
+  "item.svocore.flint_axe": "Flint Axe",
+  "item.svocore.flint_hoe": "Flint Hoe",
+  "item.svocore.flint_sword": "Flint Sword",
+  "item.svocore.flint_axe_head": "Flint Axe Head",
+
+  "tag.item.svocore.flint_tool_materials": "Flint Tool Materials",
+  "tag.item.farmersdelight.drinks": "Drinks",
+  "tag.item.farmersdelight.feasts": "Feasts",
+  "tag.item.farmersdelight.meals": "Meals",
+  "tag.item.sereneseasons.spring_crops": "Spring Crops",
+  "tag.item.sereneseasons.summer_crops": "Summer Crops",
+  "tag.item.sereneseasons.autumn_crops": "Autumn Crops",
+  "tag.item.sereneseasons.winter_crops": "Winter Crops",
+
+  "tutorial.svocore.get_sticks.title": "Get some sticks",
+  "tutorial.svocore.get_sticks.description": "Punch tree leaves to collect sticks",
+  "tutorial.svocore.get_flint.title": "Get some flint",
+  "tutorial.svocore.get_flint.description": "Punch gravel to collect flint",
+  "tutorial.svocore.craft_flint_axe.title": "Craft a flint axe",
+
+  "block.minecraft.stonecutter": "Blockcutter",
+  "container.stonecutter": "Blockcutter",
+  "stat.minecraft.interact_with_stonecutter": "Interactions with Blockcutter",
+  "subtitles.ui.stonecutter.take_result": "Blockcutter used",
+  "block.minecraft.chain": "Iron Chain",
+  "block.minecraft.lantern": "Iron Lantern",
+
+  "lore.minecraft.lantern": "A block that emits more light than a torch. It can be hung from the ceiling, hung on a wall, or placed on the ground.",
+  "lore.minecraft.stonecutter": "A workstation used to craft building blocks. The job site of Masons.",
+  "lore.minecraft.compass": "An item that points to the world spawn point. Can be attached to a lodestone to point to it instead.",
+  "lore.wooden_tools.custom": "It appears to be a tool fashioned entirely out of wood? It doesn't seem very durable..."
+}

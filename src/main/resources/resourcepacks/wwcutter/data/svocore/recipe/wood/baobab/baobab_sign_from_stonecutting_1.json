@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:baobab_pressure_plate",
+     "wilderwild:baobab_door"
+  ],
+  "result": {
+    "id": "wilderwild:baobab_sign",
+    "count": 1
+  }
+}

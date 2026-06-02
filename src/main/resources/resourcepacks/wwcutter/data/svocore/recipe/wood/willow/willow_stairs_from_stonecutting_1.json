@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:willow_planks"
+  ],
+  "result": {
+    "id": "wilderwild:willow_stairs",
+    "count": 1
+  }
+}

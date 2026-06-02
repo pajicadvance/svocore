@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:willow_door",
+     "wilderwild:willow_sign",
+     "wilderwild:willow_trapdoor"
+  ],
+  "result": {
+    "id": "wilderwild:willow_pressure_plate",
+    "count": 1
+  }
+}

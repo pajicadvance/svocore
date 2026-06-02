@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:willow_sign"
+  ],
+  "result": {
+    "id": "wilderwild:willow_planks",
+    "count": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:baobab_planks",
+     "wilderwild:baobab_stairs"
+  ],
+  "result": {
+    "id": "wilderwild:baobab_trapdoor",
+    "count": 1
+  }
+}

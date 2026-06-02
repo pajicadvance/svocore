@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:cypress_planks",
+     "wilderwild:cypress_stairs",
+     "wilderwild:cypress_fence",
+     "wilderwild:cypress_pressure_plate",
+     "wilderwild:cypress_sign"
+  ],
+  "result": {
+    "id": "wilderwild:cypress_button",
+    "count": 1
+  }
+}

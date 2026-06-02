@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:maple_pressure_plate",
+     "wilderwild:maple_door"
+  ],
+  "result": {
+    "id": "wilderwild:maple_sign",
+    "count": 1
+  }
+}

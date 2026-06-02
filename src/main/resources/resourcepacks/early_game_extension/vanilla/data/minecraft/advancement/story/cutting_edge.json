@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:story/root",
+  "criteria": {
+    "get_flint_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "svocore:flint_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.cutting_edge.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "svocore:flint_axe"
+    },
+    "title": {
+      "translate": "advancements.story.cutting_edge.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_flint_axe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

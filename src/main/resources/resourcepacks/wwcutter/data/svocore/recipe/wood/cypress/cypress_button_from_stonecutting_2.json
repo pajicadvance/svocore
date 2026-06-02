@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:cypress_door",
+     "wilderwild:cypress_fence_gate"
+  ],
+  "result": {
+    "id": "wilderwild:cypress_button",
+    "count": 2
+  }
+}

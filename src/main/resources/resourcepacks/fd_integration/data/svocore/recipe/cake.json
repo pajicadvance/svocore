@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "farmersdelight:milk_bottle",
+    "B": "minecraft:sugar",
+    "C": "farmersdelight:pie_crust",
+    "D": "minecraft:sweet_berries",
+    "E": "minecraft:egg",
+    "F": "farmersdelight:apple_cider"
+  },
+  "pattern": [
+    "ADA",
+    "BEB",
+    "FCF"
+  ],
+  "result": {
+    "id": "minecraft:cake"
+  }
+}

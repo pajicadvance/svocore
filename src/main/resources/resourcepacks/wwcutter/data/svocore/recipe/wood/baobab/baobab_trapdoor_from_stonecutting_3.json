@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:baobab_door"
+  ],
+  "result": {
+    "id": "wilderwild:baobab_trapdoor",
+    "count": 2
+  }
+}

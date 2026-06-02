@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:palm_wood"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_palm_wood",
+    "count": 1
+  }
+}

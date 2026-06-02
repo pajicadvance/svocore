@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:cypress_planks",
+     "wilderwild:cypress_stairs"
+  ],
+  "result": {
+    "id": "wilderwild:cypress_trapdoor",
+    "count": 1
+  }
+}

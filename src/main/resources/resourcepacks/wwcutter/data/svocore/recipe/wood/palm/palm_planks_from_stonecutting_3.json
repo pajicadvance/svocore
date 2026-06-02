@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:palm_sign"
+  ],
+  "result": {
+    "id": "wilderwild:palm_planks",
+    "count": 2
+  }
+}

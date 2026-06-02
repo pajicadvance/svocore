@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:maple_door",
+     "wilderwild:maple_stairs"
+  ],
+  "result": {
+    "id": "wilderwild:maple_slab",
+    "count": 1
+  }
+}

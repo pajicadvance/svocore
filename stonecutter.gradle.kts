@@ -4,10 +4,8 @@ plugins {
 
 stonecutter active "26.1"
 
-// See https://stonecutter.kikugie.dev/wiki/config/params
 stonecutter parameters {
-    swaps["mod_version"] = "\"${property("mod.version")}\";"
-    swaps["minecraft"] = "\"${node.metadata.version}\";"
+    swaps["mod_id"] = "\"${property("mod.id")}\";"
     constants["release"] = property("mod.id") != "template"
     dependencies["fapi"] = node.project.property("deps.fabric_api") as String
 

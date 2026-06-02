@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:palm_wood"
+  ],
+  "result": {
+    "id": "wilderwild:palm_log",
+    "count": 1
+  }
+}

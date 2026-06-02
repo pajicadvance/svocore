@@ -1,26 +1,19 @@
-# See https://stonecutter.kikugie.dev/wiki/config/properties#centralized-properties
-mod.id = "template"
-mod.name = "Template"
-mod.group = "com.example"
-mod.version = "0.1.0"
+mod.id = "svocore"
+mod.name = "SVO Core"
+mod.group = "me.pajic"
+mod.version = "26.1.0"
 
 deps.fabric_loader = "0.19.2"
+deps.mixson = "2.2.0"
+deps.mixinconstraints = "1.1.0"
 loomx.loom_version = "1.16-SNAPSHOT"
 
-["1.21.1"]
-mod.mc_compat = ">=1.21 <=1.21.1"
-mod.mc_releases = ["1.21", "1.21.1"]
-
-deps.fabric_api = "0.116.10+1.21.1"
-
-["1.21.11"]
-mod.mc_compat = "1.21.11"
-mod.mc_releases = ["1.21.11"]
-
-deps.fabric_api = "0.141.3+1.21.11"
+mod.modrinth_id = "WVBuQZId"
 
 ["26.1"]
 mod.mc_compat = "~26.1"
-mod.mc_releases = ["26.1", "26.1.1"]
-
-deps.fabric_api = "0.145.3+26.1.1"
+mod.mc_releases = ["26.1", "26.1.1", "26.1.2"]
+deps.fabric_api = "0.150.0+26.1.2"
+deps.modmenu = "18.0.0-beta.1"
+deps.fzzy_config = "0.7.6+26.1-pre-3"
+deps.sodium = "0.8.10+mc26.1.2"

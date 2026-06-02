@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:maple_sign"
+  ],
+  "result": {
+    "id": "wilderwild:maple_planks",
+    "count": 2
+  }
+}

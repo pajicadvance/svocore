@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:maple_hanging_sign"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_maple_log",
+    "count": 2
+  }
+}

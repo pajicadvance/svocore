@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:cypress_door",
+     "wilderwild:cypress_sign",
+     "wilderwild:cypress_trapdoor"
+  ],
+  "result": {
+    "id": "wilderwild:cypress_pressure_plate",
+    "count": 1
+  }
+}

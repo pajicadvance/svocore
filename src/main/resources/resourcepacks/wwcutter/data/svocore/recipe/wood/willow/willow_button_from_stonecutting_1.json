@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:willow_planks",
+     "wilderwild:willow_stairs",
+     "wilderwild:willow_fence",
+     "wilderwild:willow_pressure_plate",
+     "wilderwild:willow_sign"
+  ],
+  "result": {
+    "id": "wilderwild:willow_button",
+    "count": 1
+  }
+}

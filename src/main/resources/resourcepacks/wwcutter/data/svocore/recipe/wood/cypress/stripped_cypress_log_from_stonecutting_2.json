@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+     "wilderwild:cypress_hanging_sign"
+  ],
+  "result": {
+    "id": "wilderwild:stripped_cypress_log",
+    "count": 2
+  }
+}
