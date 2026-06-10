@@ -5,6 +5,7 @@ import me.pajic.svocore.config.ModConfig;
 import me.pajic.svocore.datapack.ModDatapacks;
 import me.pajic.svocore.item.ModItems;
 import me.pajic.svocore.mixson.MixsonInitializer;
+import me.pajic.svocore.recipe.ModRecipes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.Identifier;
@@ -21,6 +22,7 @@ public class SVO implements ModInitializer {
     public void onInitialize() {
         MixsonInitializer.init();
         ModItems.init();
+        ModRecipes.init();
         ModDatapacks.init();
     }
 
