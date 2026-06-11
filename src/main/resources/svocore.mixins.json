@@ -3,10 +3,6 @@
   "package": "me.pajic.svocore.mixin",
   "compatibilityLevel": "${java}",
   "mixinextras": {"minVersion": "0.5.4"},
-  "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
-  "injectors": {
-    "defaultRequire": 1
-  },
   "mixins": [
     "clifffixes.SteepMaterialConditionMixin",
     "clifffixes.SurfaceSystemMixin",
@@ -25,6 +21,9 @@
     "misc.MapItemMixin",
     "misc.ReplaceDiskMixin"
   ],
+  "injectors": {
+    "defaultRequire": 1
+  },
   "client": [
     "earlygame.CraftPlanksTutorialStepMixin",
     "earlygame.FindTreeTutorialStepInstanceMixin",

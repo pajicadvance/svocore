@@ -1,1 +1,1 @@
-- Added special crafting recipe that allows renaming items using name tags.
+- Fixed feature cycle error with Wilder Clifftree.
